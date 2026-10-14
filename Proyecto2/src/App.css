@@ -1,0 +1,13 @@
+.app {
+  min-height: 100svh;
+  display: grid;
+  place-items: center;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+@media (max-width: 560px) {
+  .app {
+    padding: 1rem;
+  }
+}

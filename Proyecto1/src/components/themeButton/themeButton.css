@@ -1,0 +1,54 @@
+#toggle-tema {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    width: 2.75rem;
+    height: 2.75rem;
+    border-radius: 50%;
+    background: var(--button-bg);
+    border: 1px solid var(--button-border);
+    backdrop-filter: blur(12px) saturate(1.4);
+    -webkit-backdrop-filter: blur(12px) saturate(1.4);
+    box-shadow: var(--button-shadow);
+    color: var(--text);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease, border-color 0.3s ease,
+        box-shadow 0.3s ease, transform 0.2s ease, color 0.3s ease;
+    z-index: 100;
+}
+
+#toggle-tema:hover {
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+    transform: scale(1.08);
+}
+
+#toggle-tema:active {
+    transform: scale(0.92);
+}
+
+#toggle-tema svg {
+    width: 1.2rem;
+    height: 1.2rem;
+    flex-shrink: 0;
+}
+
+/* Modo claro → mostrar luna (invita a cambiar a oscuro) */
+body:not(.dark) .icon-sun {
+    display: none;
+}
+
+body:not(.dark) .icon-moon {
+    display: block;
+}
+
+/* Modo oscuro → mostrar sol (invita a cambiar a claro) */
+body.dark .icon-moon {
+    display: none;
+}
+
+body.dark .icon-sun {
+    display: block;
+}

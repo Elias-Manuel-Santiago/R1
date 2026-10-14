@@ -1,0 +1,70 @@
+.tarjeta {
+  width: min(100%, 680px);
+  display: flex;
+  align-items: center;
+  gap: clamp(1.5rem, 5vw, 3rem);
+  padding: clamp(1.5rem, 5vw, 3rem);
+  border: 3px solid var(--borde);
+  border-radius: 4px;
+  background: var(--tarjeta);
+  box-shadow: 10px 10px 0 var(--sombra);
+  box-sizing: border-box;
+  transition: background-color 0.2s, border-color 0.2s, box-shadow 0.2s;
+}
+
+.tarjeta__imagen {
+  width: clamp(140px, 26vw, 210px);
+  aspect-ratio: 1;
+  flex: 0 0 auto;
+  border: 3px solid var(--borde);
+  border-radius: 50%;
+  object-fit: cover;
+  filter: sepia(20%);
+}
+
+.tarjeta__info {
+  min-width: 0;
+  text-align: left;
+}
+
+.tarjeta__etiqueta {
+  display: inline-block;
+  margin-bottom: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  color: var(--tarjeta);
+  background: var(--detalle);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.tarjeta__nombre {
+  margin: 0;
+  font-size: clamp(2rem, 7vw, 3.5rem);
+  line-height: 0.95;
+  overflow-wrap: anywhere;
+  text-transform: uppercase;
+}
+
+.tarjeta__profesion {
+  margin: 1rem 0 0;
+  padding-top: 0.75rem;
+  border-top: 2px dashed var(--detalle);
+  color: var(--detalle);
+  font-size: clamp(1rem, 3vw, 1.35rem);
+  font-weight: 700;
+}
+
+@media (max-width: 560px) {
+  .tarjeta {
+    flex-direction: column;
+    text-align: center;
+    box-shadow: 6px 6px 0 var(--sombra);
+  }
+
+  .tarjeta__info {
+    width: 100%;
+    text-align: center;
+  }
+}

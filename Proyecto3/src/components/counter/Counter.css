@@ -1,0 +1,53 @@
+.counter {
+  padding: 48px;
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  background: var(--accent-bg);
+  box-shadow: var(--shadow);
+  box-sizing: border-box;
+}
+
+.counter__value {
+  margin: 0 0 32px;
+  font-family: var(--mono);
+  line-height: 1;
+}
+
+.counter__controls {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.counter__button {
+  width: 76px;
+  height: 76px;
+  padding: 0;
+  border: 2px solid transparent;
+  border-radius: 18px;
+  color: var(--accent);
+  background: var(--bg);
+  font: 600 2.5rem/1 var(--sans);
+  cursor: pointer;
+  transition: border-color 0.2s, transform 0.2s, background-color 0.2s;
+}
+
+.counter__button:hover {
+  border-color: var(--accent-border);
+  transform: translateY(-2px);
+}
+
+.counter__button:active {
+  transform: translateY(0);
+}
+
+.counter__button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+@media (max-width: 600px) {
+  .counter {
+    padding: 36px 24px;
+  }
+}

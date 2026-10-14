@@ -1,0 +1,12 @@
+/* El modificador de estado aplica el color semántico correspondiente. */
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--accent);
+  font-size: 0.78rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+.status-badge--in-progress { color: var(--focus); }
+.status-badge--completed { color: var(--success); }

@@ -1,0 +1,41 @@
+:root {
+  --fondo: #f4e7c5;
+  --tarjeta: #fff4d6;
+  --texto: #302a24;
+  --detalle: #b84a39;
+  --borde: #302a24;
+  --sombra: #302a24;
+  font-family: "Courier New", Courier, monospace;
+  color: var(--texto);
+  background: var(--fondo);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+:root.dark {
+  --fondo: #171522;
+  --tarjeta: #29243a;
+  --texto: #f8e7b7;
+  --detalle: #ef8069;
+  --borde: #f8e7b7;
+  --sombra: #0b0910;
+  color-scheme: dark;
+}
+
+:root:not(.dark) {
+  color-scheme: light;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100svh;
+  background-color: var(--fondo);
+  background-image: radial-gradient(var(--detalle) 0.7px, transparent 0.7px);
+  background-size: 16px 16px;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+button {
+  font: inherit;
+}

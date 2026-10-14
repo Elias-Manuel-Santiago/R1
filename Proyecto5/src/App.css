@@ -1,0 +1,43 @@
+.app {
+  width: 100%;
+  min-height: 100svh;
+  display: grid;
+  place-items: center;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.welcome-card {
+  width: min(100%, 30rem);
+  padding: clamp(1.5rem, 5vw, 3rem);
+  border: 1px solid var(--border);
+  border-radius: 1.25rem;
+  background: var(--card-bg);
+  box-shadow: var(--shadow);
+}
+
+.eyebrow {
+  color: var(--accent);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 0.65rem 0 0.75rem;
+  color: var(--heading);
+  font-size: clamp(2rem, 7vw, 3rem);
+  line-height: 1.1;
+}
+
+.description {
+  margin: 0;
+  color: var(--text-muted);
+}
+
+@media (max-width: 480px) {
+  .app {
+    padding: 1rem;
+  }
+}
